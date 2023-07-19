@@ -6,9 +6,80 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lotto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        [id^='digit']{
+            background-color: gold;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            text-align: center;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            gap: 20px;
+        }
+
+        body > section {
+            display: flex;
+            gap: 20px;
+        }
+
+        [for^='digit'] {
+            display: none;
+        }
+
+        #playBtn {
+            font-size: 24px;
+            padding: 10px 40px;
+            text-transform: capitalize;
+            background-color: lightskyblue;
+            border: 2px solid black;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 400ms;
+        }
+
+        #playBtn:hover {
+            background-color: black;
+            border-color: lightskyblue;
+            color: lightskyblue;
+        }
+
+
+    </style>
+
+
     <script src="./src/scripts/app.js" defer async></script>
 </head>
 <body>
 
+<h1>Lotto</h1>
+
+<section>
+    <div><label for="digit1">1.</label><input type="text" id="digit1"></div>
+    <div><label for="digit2">2.</label><input type="text" id="digit2"></div>
+    <div><label for="digit3">3.</label><input type="text" id="digit3"></div>
+    <div><label for="digit4">4.</label><input type="text" id="digit4"></div>
+    <div><label for="digit5">5.</label><input type="text" id="digit5"></div>
+    <div><label for="digit6">6.</label><input type="text" id="digit6"></div>
+</section>
+<button id="playBtn">Play</button>
+
+<div class="result"></div>
 </body>
 </html>
